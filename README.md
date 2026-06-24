@@ -2,6 +2,14 @@
 
 정적 회사 소개 홈페이지 초안입니다.
 
+## 다음 세션에서 이어가기
+
+```text
+/Users/kgm/.codex/onolab-homepage/PROJECT_MEMORY.md 읽고 오노랩 홈페이지 이어서 해줘
+```
+
+상세 운영/배포/도메인/문구 맥락은 `PROJECT_MEMORY.md`에 정리되어 있습니다.
+
 ## 위치
 
 ```text
