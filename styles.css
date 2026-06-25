@@ -983,12 +983,6 @@ a {
   font-weight: 700;
 }
 
-.partner-actions strong {
-  color: var(--green);
-  font-size: 14px;
-  line-height: 1.45;
-}
-
 .showcase-stage {
   position: relative;
   display: grid;
