@@ -22,6 +22,8 @@ Last updated: 2026-06-25
 - `alohaono/script.js`: 언어 전환과 외부 링크 관리
 - `alohaono/assets/alohaono-menu-may.pdf`: 메뉴판 PDF
 
+폰트는 알로하오노 폴더 안에 따로 복사하지 않는다. `alohaono/styles.css`에서 오노랩 공통 폰트 경로인 `../assets/fonts/`를 참조한다.
+
 ## Onolab Main Page
 
 오노랩 메인 `index.html`에는 `#partners` 섹션이 추가되어 있다.
