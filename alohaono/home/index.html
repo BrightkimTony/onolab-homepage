@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aloha Ono is a Hawaiian restaurant in Gwangalli, Busan. Aloha means hello, and Ono means delicious."
+    />
+    <title>Aloha Ono | Hawaiian Restaurant in Gwangalli</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Aloha Ono home">
+        <span class="brand-mark">AO</span>
+        <span>Aloha Ono</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#menu" data-i18n="navMenu">Menu</a>
+        <a href="#view" data-i18n="navView">View</a>
+        <a href="../reservation/" data-i18n="navReserve">Reserve</a>
+        <a href="../reservation/#links" data-i18n="navLinks">Links</a>
+      </nav>
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">KR</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-image" src="../assets/ocean-table.jpg" alt="Hawaiian brunch table with Gwangalli beach view" />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="heroEyebrow">Hawaiian Restaurant · Gwangalli</p>
+          <h1 data-i18n="heroTitle">Aloha means hello. Ono means delicious.</h1>
+          <p data-i18n="heroCopy">
+            Aloha Ono serves Hawaiian-inspired food with a Gwangalli ocean view, bringing a warm island greeting and a delicious table to Busan.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="../reservation/" data-i18n="heroReserve">Make a reservation</a>
+            <a class="button secondary" href="#menu" data-i18n="heroExplore">Explore the table</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Aloha Ono summary">
+          <span data-i18n="cardLabel">Today at Aloha Ono</span>
+          <strong data-i18n="cardTitle">Hawaiian food by the sea</strong>
+          <p data-i18n="cardCopy">Island mood, colorful plates, and a Gwangalli view come together at one table.</p>
+        </aside>
+      </section>
+
+      <section class="intro">
+        <div>
+          <span class="section-kicker">Aloha + Ono</span>
+          <h2 data-i18n="introTitle">A greeting that becomes a delicious meal.</h2>
+        </div>
+        <p data-i18n="introCopy">
+          The name joins Aloha, Hawaii's warm greeting, with Ono, the Hawaiian word for delicious. Aloha Ono is a Hawaiian restaurant that serves that meaning through food, color, and a relaxed ocean-side mood.
+        </p>
+      </section>
+
+      <section id="menu" class="menu-section">
+        <div class="section-heading">
+          <span class="section-kicker">Hawaiian Table</span>
+          <h2 data-i18n="menuTitle">Hawaiian plates made bright, fresh, and satisfying.</h2>
+        </div>
+        <div class="menu-grid">
+          <article>
+            <img src="../assets/acai-bowl.jpg" alt="A colorful acai bowl with berries and orchid" />
+            <div>
+              <span>01</span>
+              <h3 data-i18n="menuOneTitle">Acai Bowl</h3>
+              <p data-i18n="menuOneCopy">Fruit, granola, and a vivid tropical tone that brings Hawaii's color to the table.</p>
+            </div>
+          </article>
+          <article>
+            <img src="../assets/brunch-plate.jpg" alt="Brunch plate with eggs and toast" />
+            <div>
+              <span>02</span>
+              <h3 data-i18n="menuTwoTitle">Hawaiian Brunch</h3>
+              <p data-i18n="menuTwoCopy">A generous plate for late mornings, ocean light, and easy conversations.</p>
+            </div>
+          </article>
+          <article>
+            <img src="../assets/chicken-salad.jpg" alt="Chicken salad plate" />
+            <div>
+              <span>03</span>
+              <h3 data-i18n="menuThreeTitle">Fresh Island Salad</h3>
+              <p data-i18n="menuThreeCopy">Clean greens, savory protein, and a fresh island-style balance.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="view" class="view-section">
+        <div class="view-image">
+          <img src="../assets/hero-gwangalli.jpg" alt="Gwangalli bridge and sea view" />
+        </div>
+        <div class="view-copy">
+          <span class="section-kicker">Gwangalli View</span>
+          <h2 data-i18n="viewTitle">Hawaiian food with the Gwangalli view.</h2>
+          <p data-i18n="viewCopy">
+            Aloha Ono brings Hawaii's easygoing table culture to Gwangalli: sea, bridge, sunlight, and food made to feel delicious and welcoming.
+          </p>
+          <div class="view-points">
+            <span data-i18n="viewPointOne">Hawaiian food</span>
+            <span data-i18n="viewPointTwo">Ocean-view table</span>
+            <span data-i18n="viewPointThree">Gwangalli visit</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-reserve-cta">
+        <span class="section-kicker">Reservation</span>
+        <h2 data-i18n="homeReserveTitle">Ready for a Hawaiian table in Gwangalli?</h2>
+        <p data-i18n="homeReserveCopy">Open the reservation page to check the menu board first, then continue through Google, Instagram, or Naver booking.</p>
+        <a class="button primary" href="../reservation/" data-i18n="heroReserve">Make a reservation</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>Aloha Ono</strong>
+      <span data-i18n="footerCopy">Gwangalli, Busan · Hawaiian restaurant</span>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

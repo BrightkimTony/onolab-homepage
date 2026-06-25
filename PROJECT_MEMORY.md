@@ -16,6 +16,9 @@ Last updated: 2026-06-24
 - 로컬 경로: `/Users/kgm/.codex/onolab-homepage`
 - GitHub 저장소: `https://github.com/BrightkimTony/onolab-homepage`
 - 운영 도메인: `https://onolab.kr`
+- 알로하오노 하위 페이지:
+  - `https://onolab.kr/alohaono/home/`
+  - `https://onolab.kr/alohaono/reservation/`
 - 이전 GitHub Pages URL: `https://brightkimtony.github.io/onolab-homepage/`
 - 배포 방식: GitHub Pages, `main` 브랜치 루트(`/`)
 - 커스텀 도메인 파일: `CNAME`
@@ -45,6 +48,10 @@ Last updated: 2026-06-24
 - `CNAME`: `onolab.kr`
 - `assets/`: 이미지, 로고, 폰트
 - `assets/fonts/Paperlogy-*.ttf`: Paperlogy 폰트
+- `alohaono/`: 알로하오노 제휴 브랜드 정적 페이지
+  - `alohaono/home/index.html`: 알로하오노 일반 홈페이지
+  - `alohaono/reservation/index.html`: 메뉴판 + 예약 연결 랜딩
+  - `alohaono/assets/alohaono-menu-may.pdf`: 알로하오노 메뉴판 PDF
 
 ## Main Brand/Copy Direction
 
@@ -80,6 +87,18 @@ Last updated: 2026-06-24
 3. 사주코드
    - 해석형/구조화 콘텐츠 앱
    - 복잡한 사주 정보를 카드와 흐름으로 정리
+
+## Partners
+
+현재 오노랩 홈페이지의 제휴/파트너 섹션:
+
+1. Aloha Ono
+   - 광안리 하와이안 레스토랑
+   - 오노랩 도메인 하위 경로로 운영
+   - 일반 페이지: `/alohaono/home/`
+   - 광고/예약 랜딩: `/alohaono/reservation/`
+   - 별도 도메인 구매 없이 오노랩 도메인 안에서 운영한다.
+   - 나중에 떼려면 `index.html`의 `#partners` 섹션과 `alohaono/` 폴더를 제거하면 된다.
 
 ## Contact
 
@@ -154,6 +173,12 @@ git push
 ```
 
 GitHub Pages는 `main` 브랜치에 push하면 자동 배포된다. 보통 1분 안팎으로 `https://onolab.kr`에 반영된다.
+
+알로하오노 하위 페이지를 수정할 때:
+
+- 경로 기준은 오노랩 프로젝트 안의 `alohaono/` 폴더다.
+- 알로하오노 원본 프로젝트는 `/Users/kgm/.codex/alohaono-homepage`에 따로 남아 있다.
+- 오노랩에 배포할 버전은 `alohaono/home/`, `alohaono/reservation/` 안의 파일을 기준으로 확인한다.
 
 ## Verification Commands
 

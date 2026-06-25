@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Reserve Aloha Ono in Gwangalli. Check the Hawaiian restaurant menu board and continue through Google, Instagram, or Naver booking."
+    />
+    <title>Aloha Ono | Reservation</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="reservation-page">
+    <header class="site-header">
+      <a class="brand" href="../home/" aria-label="Aloha Ono home">
+        <span class="brand-mark">AO</span>
+        <span>Aloha Ono</span>
+      </a>
+      <nav class="site-nav" aria-label="Reservation navigation">
+        <a href="../home/" data-i18n="navHome">Home</a>
+        <a href="#menu-board" data-i18n="navMenu">Menu</a>
+        <a href="#reserve" data-i18n="navReserve">Reserve</a>
+        <a href="#links" data-i18n="navLinks">Links</a>
+      </nav>
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">KR</button>
+    </header>
+
+    <main id="top">
+      <section class="reservation-hero">
+        <img class="hero-image" src="../assets/ocean-table.jpg" alt="Aloha Ono ocean-view table" />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="reservation-hero-copy">
+          <p class="eyebrow" data-i18n="reservationEyebrow">Menu first · Reservation next</p>
+          <h1 data-i18n="reservationTitle">Check the Hawaiian menu, then reserve your table.</h1>
+          <p data-i18n="reservationCopy">
+            Review the Aloha Ono menu board first. When you are ready, continue through Google, Instagram, or Naver booking.
+          </p>
+        </div>
+      </section>
+
+      <section id="menu-board" class="menu-board-section">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Menu Board</span>
+            <h2 data-i18n="menuBoardTitle">Aloha Ono menu board</h2>
+          </div>
+          <p class="section-note" data-i18n="menuBoardCopy">Open the menu in the page, or download the PDF if your browser does not display it clearly.</p>
+        </div>
+        <div class="menu-board-frame">
+          <iframe src="../assets/alohaono-menu-may.pdf#view=FitH" title="Aloha Ono menu board"></iframe>
+        </div>
+        <a class="button menu-download" href="../assets/alohaono-menu-may.pdf" target="_blank" rel="noopener noreferrer" data-i18n="downloadMenu">Open menu PDF</a>
+      </section>
+
+      <section id="reserve" class="reserve-section reserve-page-section">
+        <div class="reserve-copy">
+          <span class="section-kicker">Reservation</span>
+          <h2 data-i18n="reserveTitle">Plan your Aloha Ono visit.</h2>
+          <p data-i18n="reserveCopy">
+            This page does not collect reservation data. Continue through the official channels below, with Naver booking as the direct reservation route.
+          </p>
+        </div>
+        <div class="reserve-links" aria-label="Reservation and contact channels">
+          <a href="#" target="_blank" rel="noopener noreferrer" data-external-link="google">
+            <span>01</span>
+            <strong>Google</strong>
+            <em data-i18n="googleReserveCopy">Check directions and store details.</em>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" data-external-link="instagram">
+            <span>02</span>
+            <strong>Instagram</strong>
+            <em data-i18n="instagramReserveCopy">See the latest photos and message the shop.</em>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" data-external-link="naver">
+            <span>03</span>
+            <strong>Naver</strong>
+            <em data-i18n="naverReserveCopy">Reserve through Naver booking.</em>
+          </a>
+        </div>
+      </section>
+
+      <section id="links" class="links-section">
+        <div class="section-heading">
+          <span class="section-kicker">Find Us</span>
+          <h2 data-i18n="linksTitle">Continue from search to visit.</h2>
+        </div>
+        <div class="link-grid">
+          <a href="#" target="_blank" rel="noopener noreferrer" data-external-link="google">
+            <span>01</span>
+            <strong>Google</strong>
+            <em data-i18n="googleCopy">Map search and route check</em>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" data-external-link="instagram">
+            <span>02</span>
+            <strong>Instagram</strong>
+            <em data-i18n="instagramCopy">Photos, mood, and updates</em>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" data-external-link="naver">
+            <span>03</span>
+            <strong>Naver</strong>
+            <em data-i18n="naverCopy">Korean search and local info</em>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>Aloha Ono</strong>
+      <span data-i18n="footerCopy">Gwangalli, Busan · Hawaiian restaurant</span>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

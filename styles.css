@@ -648,6 +648,7 @@ a {
 }
 
 .work-section,
+.partners-section,
 .services-section {
   padding: clamp(54px, 8vw, 104px) clamp(20px, 5vw, 64px);
   border-bottom: 1px solid var(--line);
@@ -900,6 +901,92 @@ a {
   margin-top: 8px;
   font-size: clamp(20px, 1.9vw, 25px);
   font-weight: 700;
+}
+
+.partners-section {
+  background:
+    radial-gradient(circle at 16% 16%, rgba(31, 122, 122, 0.12), transparent 34%),
+    linear-gradient(180deg, #fbf7ee, #f0eadf);
+}
+
+.partner-card {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.05fr) minmax(300px, 0.95fr);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf0;
+  box-shadow: 0 14px 44px rgba(30, 26, 20, 0.1);
+  transition:
+    transform 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.partner-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center center;
+  background: #e8e2d4;
+  transition: transform 700ms cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+
+.partner-card:hover img {
+  transform: scale(1.035);
+}
+
+.partner-body {
+  display: grid;
+  align-content: center;
+  padding: clamp(28px, 5vw, 58px);
+}
+
+.partner-body h3 {
+  font-family: var(--font-heading);
+  margin: 12px 0 16px;
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.partner-body p:not(.work-type) {
+  margin: 0;
+  max-width: 44ch;
+  color: var(--muted);
+  font-size: clamp(16px, 1.45vw, 19px);
+  line-height: var(--lh-body);
+}
+
+.partner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.partner-actions span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fffaf0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.partner-actions strong {
+  color: var(--green);
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .showcase-stage {
@@ -1326,6 +1413,7 @@ a {
   .hero,
   .now-layout,
   .brand-portal,
+  .partner-card,
   .values-grid {
     grid-template-columns: 1fr;
   }
@@ -1347,6 +1435,10 @@ a {
   .portal-rail,
   .journal-grid {
     grid-template-columns: 1fr;
+  }
+
+  .partner-card img {
+    min-height: 320px;
   }
 
   .showcase-stage {
