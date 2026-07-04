@@ -768,6 +768,11 @@ a {
   transform: translateY(-4px);
 }
 
+.work-card:focus-visible {
+  outline: 3px solid rgba(198, 146, 42, 0.55);
+  outline-offset: 4px;
+}
+
 .work-card img {
   width: 100%;
   height: clamp(210px, 18vw, 280px);
