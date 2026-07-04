@@ -17,8 +17,9 @@ Last updated: 2026-07-04
 - GitHub 저장소: `https://github.com/BrightkimTony/onolab-homepage`
 - 운영 도메인: `https://onolab.kr`
 - 알로하오노 하위 페이지:
-  - `https://onolab.kr/alohaono/home/`
-  - `https://onolab.kr/alohaono/reservation/`
+  - 레거시 경로로 보관: `https://onolab.kr/alohaono/home/`
+  - 레거시 경로로 보관: `https://onolab.kr/alohaono/reservation/`
+  - 분리 목표: `https://alohaono.onolab.kr`
 - 이전 GitHub Pages URL: `https://brightkimtony.github.io/onolab-homepage/`
 - 배포 방식: GitHub Pages, `main` 브랜치 루트(`/`)
 - 커스텀 도메인 파일: `CNAME`
@@ -44,6 +45,7 @@ Last updated: 2026-07-04
 - 2026-07-04: 알로하오노 예약 페이지의 Google/Instagram/Naver 링크가 JS 적용 전 `href="#"`로 남아 있던 점을 수정했다. `alohaono/reservation/index.html`에 실제 외부 URL을 기본 `href`로 넣고, 기존 `data-external-link` 기반 JS 보강은 유지했다.
 - 검증: HTML 로컬 링크/자산 검사 문제 0건, placeholder `href="#"` 검색 0건, `https://onolab.kr`, `/alohaono/home/`, `/alohaono/reservation/`, `/busansea/` 모두 `200 OK`, GitHub Pages 커스텀 도메인 `onolab.kr` 인증서 `approved` 및 HTTPS 강제 적용 확인.
 - 커밋/배포: `330c1b5 Harden Aloha Ono reservation links`를 `main`에 push. GitHub Pages 자동 배포 대기/반영 대상.
+- 2026-07-04: 알로하오노를 오노랩 메인에서 분리하기로 했다. 오노랩 메인 상단 `제휴` 메뉴와 Partners 섹션의 Aloha Ono 카드를 제거한다. 알로하오노 독립 repo는 `/Users/kgm/.codex/alohaono-homepage`, 목표 서브도메인은 `alohaono.onolab.kr`. 기존 `alohaono/` 폴더는 DNS 전환 전 레거시 경로 보호용으로 보관한다.
 
 ## Files
 
@@ -54,7 +56,7 @@ Last updated: 2026-07-04
 - `CNAME`: `onolab.kr`
 - `assets/`: 이미지, 로고, 폰트
 - `assets/fonts/Paperlogy-*.ttf`: Paperlogy 폰트
-- `alohaono/`: 알로하오노 제휴 브랜드 정적 페이지
+- `alohaono/`: 알로하오노 레거시 정적 페이지
   - `alohaono/home/index.html`: 알로하오노 일반 홈페이지
   - `alohaono/reservation/index.html`: 메뉴판 + 예약 연결 랜딩
   - `alohaono/assets/alohaono-menu-may.pdf`: 알로하오노 메뉴판 PDF
@@ -100,13 +102,9 @@ Last updated: 2026-07-04
 
 현재 오노랩 홈페이지의 제휴/파트너 섹션:
 
-1. Aloha Ono
-   - 광안리 하와이안 레스토랑
-   - 오노랩 도메인 하위 경로로 운영
-   - 일반 페이지: `/alohaono/home/`
-   - 광고/예약 랜딩: `/alohaono/reservation/`
-   - 별도 도메인 구매 없이 오노랩 도메인 안에서 운영한다.
-   - 나중에 떼려면 `index.html`의 `#partners` 섹션과 `alohaono/` 폴더를 제거하면 된다.
+- 2026-07-04 기준 Aloha Ono는 오노랩 메인 노출에서 분리한다.
+- 독립 사이트 목표: `https://alohaono.onolab.kr`
+- 기존 `alohaono/` 폴더는 DNS 전환 전 레거시 경로 보호용으로 보관한다.
 
 ## Contact
 

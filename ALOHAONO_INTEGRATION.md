@@ -1,17 +1,24 @@
 # Aloha Ono Integration
 
-Last updated: 2026-06-25
+Last updated: 2026-07-04
 
 ## Public Paths
 
-오노랩 도메인 안에서 알로하오노를 운영한다.
+알로하오노는 오노랩 메인과 분리해 별도 서브도메인으로 운영한다.
+
+- 목표 URL: `https://alohaono.onolab.kr`
+- GitHub repo: `https://github.com/BrightkimTony/alohaono-homepage`
+- Pages source: `main` branch root
+- DNS 필요 작업: Hosting.kr에서 `alohaono` CNAME -> `BrightkimTony.github.io`
+
+기존 오노랩 하위 경로는 DNS 전환 전 레거시 보호용으로 보관한다.
 
 - `https://onolab.kr/alohaono/home/`
 - `https://onolab.kr/alohaono/reservation/`
 
-광고 랜딩은 아래 주소를 우선 사용한다.
+광고 랜딩은 독립 사이트에서 아래 주소를 우선 사용한다.
 
-- `https://onolab.kr/alohaono/reservation/`
+- `https://alohaono.onolab.kr/reservation/`
 
 ## Files
 
@@ -26,19 +33,15 @@ Last updated: 2026-06-25
 
 ## Onolab Main Page
 
-오노랩 메인 `index.html`에는 `#partners` 섹션이 추가되어 있다.
-
-- 섹션명: `Partners`
-- 카드명: `Aloha Ono`
-- 링크: `./alohaono/home/`
+오노랩 메인 `index.html`에서는 Aloha Ono 파트너 카드와 상단 `제휴` 메뉴를 제거했다.
 
 ## Detach Plan
 
-나중에 알로하오노를 오노랩에서 빼려면:
+나중에 레거시 경로까지 완전히 제거하려면:
 
-1. `index.html`에서 `#partners` 섹션의 `Aloha Ono` 카드를 제거한다.
-2. 상단 메뉴의 `제휴` 링크가 필요 없으면 제거한다.
-3. `alohaono/` 폴더를 제거한다.
+1. `alohaono.onolab.kr` DNS와 HTTPS가 정상 동작하는지 확인한다.
+2. 광고/외부 링크가 모두 새 서브도메인을 쓰는지 확인한다.
+3. `alohaono/` 폴더를 제거하거나, 일정 기간 `/alohaono/*` -> 새 서브도메인 안내/리다이렉트만 유지한다.
 4. 커밋 후 배포한다.
 
 ## Source Project
