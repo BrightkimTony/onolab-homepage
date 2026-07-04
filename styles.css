@@ -1445,6 +1445,21 @@ a {
   width: min(100%, 260px);
 }
 
+.consult-action {
+  display: grid;
+  justify-items: end;
+  gap: 18px;
+}
+
+.consult-action p {
+  max-width: 32ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.72;
+  text-align: right;
+}
+
 .consult-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1592,6 +1607,14 @@ a {
 
   .contact-section .button {
     justify-self: start;
+  }
+
+  .consult-action {
+    justify-items: start;
+  }
+
+  .consult-action p {
+    text-align: left;
   }
 }
 
