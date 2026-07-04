@@ -8,7 +8,7 @@ Google Play용 `부산바다 지금` 웹앱은 오노랩 메인과 분리한 독
 
 - 목표 URL: `https://busansea.onolab.kr/`
 - DNS 필요 작업: Hosting.kr에서 `busansea` CNAME -> `BrightkimTony.github.io`
-- 레거시 경로: `https://onolab.kr/busansea/`
+- 레거시/광고 경로: `https://onolab.kr/busansea/`
 
 ## Source Project
 
@@ -67,4 +67,4 @@ https://busansea.onolab.kr/
 
 ## Legacy Path
 
-`/Users/kgm/.codex/onolab-homepage/busansea/`는 DNS/HTTPS 전환 전 보호용 레거시 경로로 남겨둔다.
+`/Users/kgm/.codex/onolab-homepage/busansea/`는 Google 광고와 기존 공유 링크용 레거시 경로로 계속 남겨둔다. 새 서브도메인이 정상 동작해도 바로 제거하지 않는다.

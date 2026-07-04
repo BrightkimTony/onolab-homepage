@@ -11,7 +11,7 @@ Last updated: 2026-07-04
 - Pages source: `main` branch root
 - DNS 필요 작업: Hosting.kr에서 `alohaono` CNAME -> `BrightkimTony.github.io`
 
-기존 오노랩 하위 경로는 DNS 전환 전 레거시 보호용으로 보관한다.
+기존 오노랩 하위 경로는 레거시/Google 광고 경로로 계속 보관한다.
 
 - `https://onolab.kr/alohaono/home/`
 - `https://onolab.kr/alohaono/reservation/`
@@ -37,12 +37,12 @@ Last updated: 2026-07-04
 
 ## Detach Plan
 
-나중에 레거시 경로까지 완전히 제거하려면:
+레거시 경로 운영 원칙:
 
-1. `alohaono.onolab.kr` DNS와 HTTPS가 정상 동작하는지 확인한다.
-2. 광고/외부 링크가 모두 새 서브도메인을 쓰는지 확인한다.
-3. `alohaono/` 폴더를 제거하거나, 일정 기간 `/alohaono/*` -> 새 서브도메인 안내/리다이렉트만 유지한다.
-4. 커밋 후 배포한다.
+- `https://onolab.kr/alohaono/home/`
+- `https://onolab.kr/alohaono/reservation/`
+
+위 경로는 Google 광고와 기존 공유 링크용으로 유지한다. 새 서브도메인이 정상 동작해도 바로 제거하지 않는다.
 
 ## Source Project
 
