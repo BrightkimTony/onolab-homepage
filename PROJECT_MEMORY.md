@@ -1,6 +1,6 @@
 # Onolab Homepage Project Memory
 
-Last updated: 2026-06-24
+Last updated: 2026-07-04
 
 ## Start Here
 
@@ -38,6 +38,12 @@ Last updated: 2026-06-24
 - 확인 완료:
   - `https://onolab.kr` -> `200 OK`
   - `www.onolab.kr` -> `onolab.kr`로 연결
+
+## Latest Maintenance
+
+- 2026-07-04: 알로하오노 예약 페이지의 Google/Instagram/Naver 링크가 JS 적용 전 `href="#"`로 남아 있던 점을 수정했다. `alohaono/reservation/index.html`에 실제 외부 URL을 기본 `href`로 넣고, 기존 `data-external-link` 기반 JS 보강은 유지했다.
+- 검증: HTML 로컬 링크/자산 검사 문제 0건, placeholder `href="#"` 검색 0건, `https://onolab.kr`, `/alohaono/home/`, `/alohaono/reservation/`, `/busansea/` 모두 `200 OK`, GitHub Pages 커스텀 도메인 `onolab.kr` 인증서 `approved` 및 HTTPS 강제 적용 확인.
+- 커밋/배포: `330c1b5 Harden Aloha Ono reservation links`를 `main`에 push. GitHub Pages 자동 배포 대기/반영 대상.
 
 ## Files
 
