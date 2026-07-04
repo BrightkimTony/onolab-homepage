@@ -49,6 +49,7 @@ Last updated: 2026-07-04
 
 - 2026-07-04: 사업계획서(`/Users/kgm/.codex/business_plans/onolab-ai-local-branding/ONOLAB_AI_LOCAL_BRANDING_BUSINESS_PLAN_v1.md`) 방향에 맞춰 오노랩 메인 홈페이지를 AI 로컬 브랜딩 운영 모델 중심으로 재정렬했다. 히어로/소개 문구에 공공데이터, 현장 콘텐츠, AI 구조화, 발견-문의-방문-구매 흐름을 반영했고, `Operating Model` 섹션을 추가해 수집 -> 구조화 -> 배포 -> 개선 루프를 보여주도록 했다. 서비스 섹션도 `로컬 컨텍스트 정리`, `웹/랜딩 페이지 구축`, `AI 콘텐츠 변환`, `성과 기반 운영`으로 변경했다.
 - 검증: 메인 `index.html`의 로컬 링크/자산 검사 문제 0건, placeholder `href="#"` 및 메인 Aloha Ono/Partners/제휴 노출 검색 0건, 로컬 서버 `http://127.0.0.1:4173/` 200 OK, Playwright 데스크톱/모바일 스크린샷 확인 완료. 모바일 앵커 이동 시 제목이 헤더에 가리지 않도록 `section[id]`의 `scroll-margin-top`을 보정했다.
+- 2026-07-04: 홈페이지 카피는 사업계획서보다 더 고객-facing한 표현으로 다듬었다. `공공데이터` 전면 노출을 줄이고 `데이터`, `콘텐츠`, `고객 접점`, `전환`, `운영 개선`을 중심으로 표현한다. `발견`은 다소 평이해서 `맥락`, `접점`, `전환` 같은 단어를 우선 사용한다. 하단 Contact 섹션은 `AI Local Branding Consult`로 바꾸고 상담 가능 범위 태그를 추가했다.
 - 2026-07-04: 알로하오노 예약 페이지의 Google/Instagram/Naver 링크가 JS 적용 전 `href="#"`로 남아 있던 점을 수정했다. `alohaono/reservation/index.html`에 실제 외부 URL을 기본 `href`로 넣고, 기존 `data-external-link` 기반 JS 보강은 유지했다.
 - 검증: HTML 로컬 링크/자산 검사 문제 0건, placeholder `href="#"` 검색 0건, `https://onolab.kr`, `/alohaono/home/`, `/alohaono/reservation/`, `/busansea/` 모두 `200 OK`, GitHub Pages 커스텀 도메인 `onolab.kr` 인증서 `approved` 및 HTTPS 강제 적용 확인.
 - 커밋/배포: `330c1b5 Harden Aloha Ono reservation links`를 `main`에 push. GitHub Pages 자동 배포 대기/반영 대상.

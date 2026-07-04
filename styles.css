@@ -1445,6 +1445,31 @@ a {
   width: min(100%, 260px);
 }
 
+.consult-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  max-width: 620px;
+}
+
+.consult-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(21, 21, 21, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.62);
+  color: #4e4941;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact-button {
+  box-shadow: 0 14px 34px rgba(187, 63, 50, 0.22);
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
