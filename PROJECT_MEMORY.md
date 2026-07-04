@@ -20,6 +20,11 @@ Last updated: 2026-07-04
   - 레거시 경로로 보관: `https://onolab.kr/alohaono/home/`
   - 레거시 경로로 보관: `https://onolab.kr/alohaono/reservation/`
   - 분리 목표: `https://alohaono.onolab.kr`
+- 부산바다 지금:
+  - 레거시 경로로 보관: `https://onolab.kr/busansea/`
+  - 분리 목표: `https://busansea.onolab.kr`
+  - 독립 repo: `/Users/kgm/.codex/busansea-homepage`
+  - GitHub 저장소: `https://github.com/BrightkimTony/busansea-homepage`
 - 이전 GitHub Pages URL: `https://brightkimtony.github.io/onolab-homepage/`
 - 배포 방식: GitHub Pages, `main` 브랜치 루트(`/`)
 - 커스텀 도메인 파일: `CNAME`
@@ -46,6 +51,7 @@ Last updated: 2026-07-04
 - 검증: HTML 로컬 링크/자산 검사 문제 0건, placeholder `href="#"` 검색 0건, `https://onolab.kr`, `/alohaono/home/`, `/alohaono/reservation/`, `/busansea/` 모두 `200 OK`, GitHub Pages 커스텀 도메인 `onolab.kr` 인증서 `approved` 및 HTTPS 강제 적용 확인.
 - 커밋/배포: `330c1b5 Harden Aloha Ono reservation links`를 `main`에 push. GitHub Pages 자동 배포 대기/반영 대상.
 - 2026-07-04: 알로하오노를 오노랩 메인에서 분리하기로 했다. 오노랩 메인 상단 `제휴` 메뉴와 Partners 섹션의 Aloha Ono 카드를 제거한다. 알로하오노 독립 repo는 `/Users/kgm/.codex/alohaono-homepage`, 목표 서브도메인은 `alohaono.onolab.kr`. 기존 `alohaono/` 폴더는 DNS 전환 전 레거시 경로 보호용으로 보관한다.
+- 2026-07-04: 부산바다 지금도 오노랩 메인과 분리하기로 했다. 독립 repo `/Users/kgm/.codex/busansea-homepage`를 만들고 `https://github.com/BrightkimTony/busansea-homepage`에 push했다. GitHub Pages CNAME은 `busansea.onolab.kr`로 설정했다. 기존 `busansea/` 폴더는 DNS/HTTPS 전환 전 레거시 경로 보호용으로 보관한다. Hosting.kr에서 `busansea` CNAME을 `BrightkimTony.github.io`로 추가해야 HTTPS 인증서 발급을 마무리할 수 있다.
 
 ## Files
 
