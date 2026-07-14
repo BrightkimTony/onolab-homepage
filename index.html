@@ -177,20 +177,20 @@
           </div>
           <a class="pilot-badge" href="https://app.onolab.kr">app.onolab.kr ↗</a>
         </div>
-        <div class="insight-grid">
-          <a class="insight-card insight-featured" href="https://app.onolab.kr/insights">
+        <div class="insight-grid" data-published-insights>
+          <a class="insight-card insight-featured" data-fallback-insight href="https://app.onolab.kr/insights">
             <span>01 · 탐색</span>
             <h3>지역과 주제로 찾고, 필요한 기록만 읽습니다.</h3>
             <p>제목·요약·지역·주제 검색과 필터로 부산 로컬 인사이트를 빠르게 좁힙니다.</p>
             <em>인사이트 보기 →</em>
           </a>
-          <a class="insight-card" href="https://app.onolab.kr/my">
+          <a class="insight-card" data-fallback-insight href="https://app.onolab.kr/my">
             <span>02 · 보관</span>
             <h3>다시 볼 글과 내 활동을 한곳에 모읍니다.</h3>
             <p>저장한 인사이트, 작성한 커뮤니티 글의 검수 상태, 오노레터 구독을 직접 관리합니다.</p>
             <em>MY ONOLAB →</em>
           </a>
-          <a class="insight-card" href="https://app.onolab.kr/community">
+          <a class="insight-card" data-fallback-insight href="https://app.onolab.kr/community">
             <span>03 · 참여</span>
             <h3>사람이 검수한 현장 기록을 함께 쌓습니다.</h3>
             <p>회원 글은 바로 공개되지 않습니다. 개인정보와 홍보성 표현을 확인한 뒤 공개합니다.</p>
@@ -579,6 +579,7 @@
       </div>
     </footer>
 
+    <script src="./public-data-config.js" defer></script>
     <script src="./script.js" defer></script>
   </body>
 </html>
