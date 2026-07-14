@@ -3,9 +3,12 @@ const header = document.querySelector(".site-header");
 const tabs = [...document.querySelectorAll(".stage-tab")];
 const stageImages = [...document.querySelectorAll("[data-stage-image]")];
 const stageCopies = [...document.querySelectorAll("[data-stage-copy]")];
-const revealTargets = [...document.querySelectorAll(".work-card")];
+const revealTargets = [
+  ...document.querySelectorAll(".work-card, .path-card, .insight-card"),
+];
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 if (reduceMotion) document.body.classList.add("no-motion");
 
 function updateHeader() {
@@ -29,7 +32,7 @@ for (const tab of tabs) {
   tab.addEventListener("click", () => setStage(tab.dataset.stage));
 }
 
-if (!reduceMotion) {
+if (!reduceMotion && finePointer) {
   window.addEventListener(
     "pointermove",
     (event) => {
@@ -40,19 +43,23 @@ if (!reduceMotion) {
   );
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+if ("IntersectionObserver" in window && !reduceMotion) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
       }
-    }
-  },
-  { threshold: 0.18 },
-);
+    },
+    { threshold: 0.18 },
+  );
 
-for (const target of revealTargets) observer.observe(target);
+  for (const target of revealTargets) observer.observe(target);
+} else {
+  for (const target of revealTargets) target.classList.add("is-visible");
+}
 
 window.addEventListener(
   "scroll",
