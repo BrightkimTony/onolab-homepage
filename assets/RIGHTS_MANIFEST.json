@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "onolab.public-candidate-rights.v1",
+  "candidateId": "WEB-INCREDIBLES-CANON-PUBLIC-RELEASE-001",
+  "asOf": "2026-07-17",
+  "candidateRenderedAssetGate": {
+    "status": "pass",
+    "cleared": 1,
+    "total": 1,
+    "unresolved": 0
+  },
+  "publicRelease": {
+    "ready": false,
+    "status": "user_deploy_authorized_main_acceptance_pending",
+    "note": "The user authorized deployment on 2026-07-17. Candidate asset clearance and that authorization do not replace Main acceptance or the release-package exclusion audit."
+  },
+  "existingPublicSourceRights": {
+    "cleared": 0,
+    "total": 6,
+    "unchanged": true,
+    "scope": "legacy repository files excluded from rendered root references; repository-level exclusion remains a separate release-package check"
+  },
+  "fonts": {
+    "runtimeFiles": 0,
+    "externalOrigins": 0,
+    "stack": "local operating-system Korean sans and metadata mono only"
+  },
+  "assets": [
+    {
+      "publicRef": "./assets/field-hands-pointillist.svg",
+      "sha256": "7530120f21eeee30fb6caac6579a9ecf3fc2eec4121b91d857a492f7752c26a4",
+      "bytes": 3607,
+      "mime": "image/svg+xml",
+      "dimensions": "1200x820 viewBox",
+      "usage": [
+        "hero bounded proximity reveal",
+        "hero focus/tap evidence state"
+      ],
+      "creator": "OnoLab Web task MAIN-WEB-PUBLIC-HUMAN-SIGNAL-SLICE-001, reused unchanged through WEB-PUBLIC-INTERACTION-DEPTH-002 and WEB-INCREDIBLES-CANON-PUBLIC-RELEASE-001",
+      "origin": "original code-native SVG authored locally for the 4412 baseline and recolored locally to the 2026-07-17 cobalt/coral/pink public canon",
+      "rightsBasis": "self-created project output; no third-party asset, font, code or customer material",
+      "commercialPublicWebUse": true,
+      "modificationAndHalftoneUse": true,
+      "attributionRequired": false,
+      "subjectConsent": "not_applicable_no_real_person_or_likeness",
+      "customerOrCompanyIdentity": false,
+      "territory": "worldwide",
+      "expiry": null,
+      "status": "cleared_for_candidate"
+    }
+  ],
+  "forbiddenReplacementSources": [
+    "customer or tenant material",
+    "private admin or engine assets",
+    "unverified legacy homepage assets",
+    "remote image, font, icon or CDN"
+  ]
+}

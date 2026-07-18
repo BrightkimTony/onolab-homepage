@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">메뉴를 함께 보는 두 사람의 손</title>
+  <desc id="desc">작은 매장 테이블에서 메뉴와 메모를 사이에 두고 함께 선택하는 순간을 점묘로 표현한 추상 장면</desc>
+  <defs>
+    <pattern id="blueDots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="3.3" fill="#3867ff"/>
+      <circle cx="13" cy="13" r="1.7" fill="#3867ff" opacity=".72"/>
+    </pattern>
+    <pattern id="coralDots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r="3.8" fill="#ff6f78"/>
+      <circle cx="15" cy="15" r="2.1" fill="#ff9ab2" opacity=".78"/>
+    </pattern>
+    <pattern id="inkDots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="5" r="2.8" fill="#1b202a"/>
+      <circle cx="12" cy="12" r="1.5" fill="#6e7786" opacity=".8"/>
+    </pattern>
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#18345f" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="820" rx="64" fill="#f7f9ff"/>
+  <path d="M72 668 C260 614 398 650 564 703 C740 760 940 748 1130 646" fill="none" stroke="#cbd4e5" stroke-width="2" stroke-dasharray="2 13"/>
+  <ellipse cx="604" cy="440" rx="405" ry="266" fill="#edf2fb" stroke="#dce4f1" stroke-width="2"/>
+  <ellipse cx="604" cy="440" rx="330" ry="212" fill="#fff" filter="url(#softShadow)"/>
+  <g transform="rotate(-6 602 430)">
+    <rect x="455" y="272" width="304" height="344" rx="22" fill="#fffdf9" stroke="#aeb9ca" stroke-width="3"/>
+    <path d="M492 334 H718 M492 394 H688 M492 454 H716 M492 514 H642" stroke="#aeb9ca" stroke-width="8" stroke-linecap="round" stroke-dasharray="1 21"/>
+    <circle cx="705" cy="528" r="25" fill="url(#blueDots)"/>
+    <path d="M495 566 C544 548 586 548 631 566" fill="none" stroke="#ff6f78" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 18"/>
+  </g>
+  <path d="M-42 296 C92 280 200 302 304 358 C360 388 398 426 434 478 L364 558 C314 526 266 502 224 488 C148 463 64 467 -20 500 Z" fill="url(#blueDots)"/>
+  <path d="M360 458 C390 426 420 416 446 424 C475 433 486 460 474 486 C462 512 426 523 394 509 C370 499 350 480 360 458 Z" fill="url(#blueDots)"/>
+  <path d="M396 434 C427 402 446 382 462 356 C476 333 494 328 509 341 C524 355 518 377 505 398 L468 452 Z" fill="url(#blueDots)"/>
+  <path d="M1242 286 C1104 278 1005 309 910 371 C854 407 816 447 784 493 L857 568 C902 532 949 507 994 491 C1068 464 1147 466 1222 496 Z" fill="url(#coralDots)"/>
+  <path d="M858 471 C830 438 800 426 773 435 C745 444 733 473 747 499 C760 524 795 533 827 518 C851 507 869 490 858 471 Z" fill="url(#coralDots)"/>
+  <path d="M817 446 C788 414 770 392 754 365 C741 342 722 336 707 349 C692 362 698 385 711 406 L749 462 Z" fill="url(#coralDots)"/>
+  <path d="M421 630 C498 651 570 662 647 652" fill="none" stroke="url(#inkDots)" stroke-width="18" stroke-linecap="round"/>
+  <g fill="url(#inkDots)">
+    <circle cx="291" cy="211" r="37"/>
+    <circle cx="875" cy="210" r="28"/>
+    <circle cx="954" cy="608" r="42"/>
+  </g>
+  <g fill="#3867ff" opacity=".76">
+    <circle cx="239" cy="174" r="4"/><circle cx="258" cy="154" r="2.5"/><circle cx="279" cy="170" r="3"/><circle cx="321" cy="151" r="4.5"/>
+  </g>
+  <g fill="#ff6f78" opacity=".8">
+    <circle cx="893" cy="161" r="3"/><circle cx="918" cy="181" r="5"/><circle cx="940" cy="151" r="2.5"/><circle cx="969" cy="178" r="3.5"/>
+  </g>
+</svg>
