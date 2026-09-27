@@ -21,39 +21,71 @@
   if (forcedReduced) document.documentElement.dataset.motion = "reduce";
   if (forcedCoarse) document.documentElement.dataset.input = "coarse";
 
-  const evidence = Object.freeze({
-    question: Object.freeze({
-      label: "반복 질문",
-      title: "같은 질문에는 설명이 필요한 순간이 있습니다.",
-      detail: "한 번의 인상보다 같은 맥락에서 되풀이되는 말을 먼저 확인합니다.",
-      action: "다음 단서 · 처음 고르는 기준을 한 장으로 설명하기",
-      methodAction: "처음 고르는 기준을\n한 장으로 설명하기",
-      methodLive: "반복 질문을 ‘처음 고르는 기준’ 설명으로 바꿔볼 차례입니다."
+  const evidenceByAudience = Object.freeze({
+    local: Object.freeze({
+      question: Object.freeze({
+        label: "반복 질문",
+        title: "같은 질문에는 설명이 필요한 순간이 있습니다.",
+        detail: "한 번의 인상보다 같은 맥락에서 되풀이되는 말을 먼저 확인합니다.",
+        action: "먼저 해볼 일 · 처음 고르는 기준을 한 장으로 설명하기",
+        methodAction: "처음 고르는 기준을\n한 장으로 설명하기",
+        methodLive: "반복 질문을 ‘처음 고르는 기준’ 설명으로 바꿔볼 차례입니다."
+      }),
+      pause: Object.freeze({
+        label: "머뭇한 장면",
+        title: "메뉴 앞에서 잠시 멈춘 순간도 살펴볼 장면입니다.",
+        detail: "결정을 재촉하기보다 어떤 순서와 말이 막혔는지 장면을 다시 봅니다.",
+        action: "먼저 해볼 일 · 메뉴 첫 화면의 선택 순서를 세 단계로 줄이기",
+        methodAction: "메뉴 첫 화면의\n선택 순서 줄이기",
+        methodLive: "머뭇한 장면을 더 짧고 분명한 선택 순서로 바꿔봅니다."
+      }),
+      standard: Object.freeze({
+        label: "브랜드 기준",
+        title: "쉽게 말해도 대표의 기준은 지킵니다.",
+        detail: "더 세게 말하는 대신 브랜드가 약속할 수 있는 범위 안에서 설명합니다.",
+        action: "먼저 해볼 일 · 쉽게 설명하는 세 문장을 브랜드 기준으로 고정하기",
+        methodAction: "브랜드의 쉬운 말투를\n세 문장으로 고정하기",
+        methodLive: "대표가 지키는 기준을 다음 설명에서도 흔들리지 않게 정리합니다."
+      })
     }),
-    pause: Object.freeze({
-      label: "머뭇한 장면",
-      title: "잠시 멈춘 손도 선택의 신호입니다.",
-      detail: "결정을 재촉하기보다 어떤 순서와 말이 막혔는지 장면을 다시 봅니다.",
-      action: "다음 단서 · 첫 화면의 선택 순서를 세 단계로 줄이기",
-      methodAction: "메뉴 첫 화면의\n선택 순서 줄이기",
-      methodLive: "머뭇한 장면을 더 짧고 분명한 선택 순서로 바꿔봅니다."
-    }),
-    standard: Object.freeze({
-      label: "브랜드 기준",
-      title: "쉽게 말해도 대표님의 기준은 지킵니다.",
-      detail: "더 세게 말하는 대신 브랜드가 약속할 수 있는 범위 안에서 설명합니다.",
-      action: "다음 단서 · 쉽게 설명하는 세 문장을 브랜드 기준으로 고정하기",
-      methodAction: "브랜드의 쉬운 말투를\n세 문장으로 고정하기",
-      methodLive: "대표님이 지키는 기준을 다음 설명에서도 흔들리지 않게 정리합니다."
+    team: Object.freeze({
+      question: Object.freeze({
+        label: "고객·영업 반응",
+        title: "흩어진 요청은 같은 운영 과제를 가리킬 수 있습니다.",
+        detail: "채널이 달라도 같은 맥락에서 반복되는 질문과 반응을 함께 확인합니다.",
+        action: "먼저 해볼 일 · 반복되는 요청을 이번 운영 과제 한 장으로 정리하기",
+        methodAction: "반복되는 요청을\n한 과제로 정리하기",
+        methodLive: "흩어진 요청을 이번에 함께 해결할 운영 과제 하나로 좁혀봅니다."
+      }),
+      pause: Object.freeze({
+        label: "이어지지 않는 판단",
+        title: "채널과 캠페인이 따로 움직이는 순간을 함께 봅니다.",
+        detail: "도구를 더 붙이기 전에 어디에서 판단과 승인이 끊겼는지 확인합니다.",
+        action: "먼저 해볼 일 · 채널과 콘텐츠의 우선순위를 한 순서로 연결하기",
+        methodAction: "채널과 콘텐츠를\n한 순서로 연결하기",
+        methodLive: "따로 움직이는 일을 하나의 우선순위와 승인 순서로 연결해봅니다."
+      }),
+      standard: Object.freeze({
+        label: "팀의 브랜드 기준",
+        title: "쉽게 말해도 팀이 지키는 브랜드 기준은 남깁니다.",
+        detail: "협력사와 채널이 달라도 브랜드가 약속할 수 있는 범위를 먼저 확인합니다.",
+        action: "먼저 해볼 일 · 팀과 협력사가 함께 쓸 판단 기준을 세 문장으로 고정하기",
+        methodAction: "팀의 판단 기준을\n세 문장으로 고정하기",
+        methodLive: "팀과 협력사가 같은 기준으로 검토할 수 있게 정리합니다."
+      })
     })
   });
+  const evidence = evidenceByAudience[body.dataset.audience] || evidenceByAudience.local;
+  const teamAudience = body.dataset.audience === "team";
 
   const tones = ["#3867ff", "#5b7cff", "#ff6f78", "#ff9ab2", "#9aa3b4"];
   const heroDots = [];
   const methodDots = [];
+  const fieldSignals = [...document.querySelectorAll("[data-field-signal]")];
   const methodLayouts = { question: [], pause: [], standard: [] };
   let pinnedSignal = "";
   let revealOpener = null;
+  let suppressSignalFocusPreview = false;
   let heroVisible = true;
   let methodVisible = false;
   let heroFrame = 0;
@@ -108,7 +140,7 @@
     document.querySelector("[data-evidence-title]").textContent = copy.title;
     document.querySelector("[data-evidence-detail]").textContent = copy.detail;
     document.querySelector("[data-evidence-action]").textContent = copy.action;
-    document.querySelectorAll("[data-field-signal]").forEach((button) => {
+    fieldSignals.forEach((button) => {
       button.setAttribute("aria-expanded", String(button.dataset.fieldSignal === mode));
     });
     if (source === "keyboard") hero.dataset.keyboardChange = "true";
@@ -119,8 +151,12 @@
     pinnedSignal = "";
     hero.dataset.reveal = "none";
     evidenceReveal.setAttribute("aria-hidden", "true");
-    document.querySelectorAll("[data-field-signal]").forEach((button) => button.setAttribute("aria-expanded", "false"));
-    if (options.restoreFocus && revealOpener) revealOpener.focus();
+    fieldSignals.forEach((button) => button.setAttribute("aria-expanded", "false"));
+    if (options.restoreFocus && revealOpener) {
+      suppressSignalFocusPreview = true;
+      revealOpener.focus({ preventScroll: true });
+      window.requestAnimationFrame(() => { suppressSignalFocusPreview = false; });
+    }
   }
 
   function previewEvidence(mode, source) {
@@ -132,7 +168,7 @@
     if (!pinnedSignal) {
       hero.dataset.reveal = "none";
       evidenceReveal.setAttribute("aria-hidden", "true");
-      document.querySelectorAll("[data-field-signal]").forEach((button) => button.setAttribute("aria-expanded", "false"));
+      fieldSignals.forEach((button) => button.setAttribute("aria-expanded", "false"));
     }
   }
 
@@ -197,20 +233,6 @@
         }
       });
 
-      let nearest = null;
-      let nearestDistance = Infinity;
-      document.querySelectorAll("[data-field-signal]").forEach((button) => {
-        const rect = button.getBoundingClientRect();
-        const centerX = rect.left - bounds.left + rect.width / 2;
-        const centerY = rect.top - bounds.top + rect.height / 2;
-        const distance = Math.hypot(centerX - pointerX, centerY - pointerY);
-        button.dataset.proximate = "false";
-        if (distance < nearestDistance) {
-          nearest = button;
-          nearestDistance = distance;
-        }
-      });
-      if (nearest && nearestDistance < 190) nearest.dataset.proximate = "true";
       heroFrame = 0;
     });
   }
@@ -221,7 +243,7 @@
       dot.style.transform = "";
       dot.dataset.near = "false";
     });
-    document.querySelectorAll("[data-field-signal]").forEach((button) => button.dataset.proximate = "false");
+    fieldSignals.forEach((button) => delete button.dataset.proximate);
     clearPreview();
   }
 
@@ -273,116 +295,12 @@
     }
   }
 
-  const operatingCopy = Object.freeze({
-    observe: Object.freeze({
-      label: "현장을 함께 봅니다",
-      title: "사실, 시장 신호, 오노랩의 해석을 같은 무게로 섞지 않습니다.",
-      copy: "시장·리뷰·고객 질문을 출처와 시점이 보이게 정리해, 무엇을 확인했고 무엇은 아직 가설인지 나눕니다."
-    }),
-    decide: Object.freeze({
-      label: "한 행동을 설명합니다",
-      title: "왜 지금 이 행동인지, 무엇을 보류할지 함께 말합니다.",
-      copy: "브랜드의 기준과 사용할 수 있는 시간 안에서 행동 하나를 제안합니다. 채택·수정·진행하지 않음은 대표님이 정합니다."
-    }),
-    learn: Object.freeze({
-      label: "결과를 다시 봅니다",
-      title: "승인된 범위만 움직이고 관찰된 변화를 다음 판단에 씁니다.",
-      copy: "실행 전 기준과 실제로 관찰된 변화를 나눠 기록합니다. 자동 게시와 성과 보장은 운영 동행의 범위가 아닙니다."
-    })
-  });
-
-  const proofCopy = Object.freeze({
-    applied: Object.freeze({
-      label: "지금 적용하는 기준",
-      title: "사실과 해석, 사람의 결정을 나눕니다.",
-      copy: "출처와 한계, 브랜드 기준, 공개·연락·비용의 사람 확인을 매번 남깁니다.",
-      list: ["확인한 사실과 해석 구분", "브랜드가 지키는 기준 확인", "외부 행동 전 사람 결정"]
-    }),
-    testing: Object.freeze({
-      label: "지금 검증하는 범위",
-      title: "실제 한 사이클이 다음 판단에 도움이 되는지 확인합니다.",
-      copy: "한 행동을 고르고 수정해 실행한 뒤, 관찰된 결과를 다음 선택에 쓰는 과정은 아직 검증 중입니다.",
-      list: ["실제 고객 한 사이클", "행동 채택과 수정 과정", "결과를 다음 판단에 쓰는 방식"]
-    }),
-    unclaimed: Object.freeze({
-      label: "아직 공개하지 않는 것",
-      title: "확인하지 않은 성과를 먼저 채우지 않습니다.",
-      copy: "고객 매출·순위·방문 증가와 무인 운영, 자동 수익은 현재 성과로 말하지 않습니다.",
-      list: ["고객 매출·순위 성과", "무인 운영과 자동 수익", "검증되지 않은 미래 상품"]
-    })
-  });
-
-  const noteCopy = Object.freeze({
-    signal: Object.freeze({ title: "무엇이 달라졌는지 먼저 확인합니다.", copy: "같은 맥락에서 반복되는 변화인지, 한 번의 인상인지 나눠 적습니다." }),
-    scope: Object.freeze({ title: "누구에게 중요한지 범위를 좁힙니다.", copy: "모든 매장에 일반화하지 않고, 어떤 상황과 브랜드에 해당하는지 함께 남깁니다." }),
-    action: Object.freeze({ title: "읽고 끝나지 않도록 다음 확인을 둡니다.", copy: "바로 실행할 명령이 아니라, 이번 주 무엇을 더 확인할지 한 가지 행동 후보를 기록합니다." }),
-    evidence: Object.freeze({ title: "출처와 확인 시점, 한계를 붙입니다.", copy: "공식 사실, 시장 신호, 오노랩의 해석이 어디까지인지 나눠 다음 판단에서 다시 볼 수 있게 합니다." })
-  });
-
-  const flowCopy = Object.freeze({
-    context: Object.freeze({ index: "01 / 기준 듣기", title: "매장이 꼭 지키고 싶은 이유부터 듣습니다.", copy: "무엇을 더 만들지보다 어떤 경험과 약속을 흔들지 않을지 먼저 확인합니다." }),
-    scene: Object.freeze({ index: "02 / 장면 고르기", title: "최근 가장 자주 걸린 한 장면을 고릅니다.", copy: "리뷰, 고객 질문, 메뉴 앞의 망설임 가운데 지금 판단에 가장 가까운 장면 하나를 봅니다." }),
-    action: Object.freeze({ index: "03 / 행동 설명", title: "첫 행동 후보와 지금 보류할 일을 함께 설명합니다.", copy: "왜 이 행동인지, 어디까지 준비할지, 무엇은 아직 하지 않을지 한 화면에서 확인합니다." }),
-    decision: Object.freeze({ index: "04 / 함께 정하기", title: "진행, 수정, 멈춤을 서로 다른 선택으로 남깁니다.", copy: "상담 참여가 제작·업로드·공개 승인이 되지 않도록 다음 결정의 범위를 분리합니다." })
-  });
-
-  const operatingSection = document.querySelector("[data-depth-section='partnership']");
-  const proofSection = document.querySelector("[data-depth-section='proof']");
-  const noteSection = document.querySelector("[data-depth-section='note']");
   const fitSection = document.querySelector("[data-depth-section='fit']");
-  const firstFlow = document.querySelector("[data-first-flow]");
-  const noteMatrix = document.querySelector("[data-note-matrix]");
   const selectedFit = new Set();
-  let operatingPinned = "observe";
-  let proofPinned = "applied";
-  let notePinned = "signal";
 
   function markKeyboardChange(container) {
     container.dataset.keyboardChange = "true";
     window.requestAnimationFrame(() => delete container.dataset.keyboardChange);
-  }
-
-  function activateOperating(mode, source, pin) {
-    if (!operatingCopy[mode]) return;
-    if (pin) operatingPinned = mode;
-    operatingSection.dataset.operatingActive = mode;
-    document.querySelectorAll("[data-operating-card]").forEach((button) => {
-      button.setAttribute("aria-expanded", String(button.dataset.operatingCard === mode));
-    });
-    document.querySelector("[data-operating-label]").textContent = operatingCopy[mode].label;
-    document.querySelector("[data-operating-title]").textContent = operatingCopy[mode].title;
-    document.querySelector("[data-operating-copy]").textContent = operatingCopy[mode].copy;
-    if (source === "keyboard") markKeyboardChange(operatingSection);
-  }
-
-  function activateProof(mode, source, pin) {
-    if (!proofCopy[mode]) return;
-    if (pin) proofPinned = mode;
-    proofSection.dataset.proofActive = mode;
-    document.querySelectorAll("[data-proof-state]").forEach((button) => {
-      button.setAttribute("aria-pressed", String(button.dataset.proofState === mode));
-    });
-    document.querySelector("[data-proof-label]").textContent = proofCopy[mode].label;
-    document.querySelector("[data-proof-title]").textContent = proofCopy[mode].title;
-    document.querySelector("[data-proof-copy]").textContent = proofCopy[mode].copy;
-    document.querySelector("[data-proof-list]").replaceChildren(...proofCopy[mode].list.map((item) => {
-      const node = document.createElement("li");
-      node.textContent = item;
-      return node;
-    }));
-    if (source === "keyboard") markKeyboardChange(proofSection);
-  }
-
-  function activateNote(mode, source, pin) {
-    if (!noteCopy[mode]) return;
-    if (pin) notePinned = mode;
-    noteSection.dataset.noteActive = mode;
-    document.querySelectorAll("[data-note-field]").forEach((button) => {
-      button.setAttribute("aria-pressed", String(button.dataset.noteField === mode));
-    });
-    document.querySelector("[data-note-field-title]").textContent = noteCopy[mode].title;
-    document.querySelector("[data-note-field-copy]").textContent = noteCopy[mode].copy;
-    if (source === "keyboard") markKeyboardChange(noteSection);
   }
 
   function updateFitMap(source) {
@@ -391,11 +309,16 @@
     fitMap.dataset.count = String(count);
     document.querySelector("[data-fit-count]").textContent = `선택 ${count} / 3`;
     document.querySelectorAll("[data-fit-node]").forEach((node) => node.dataset.selected = String(selectedFit.has(node.dataset.fitNode)));
-    const summaries = [
-      "가까운 문장을 선택하면, 함께 확인할 지점이 연결됩니다.",
-      "선택한 한 지점을 첫 대화에서 구체적으로 확인할 수 있습니다.",
-      "두 지점이 연결됐습니다. 무엇부터 볼지 한 행동으로 좁혀봅니다.",
-      "세 지점이 연결됐습니다. 맥락·집중·사람 결정을 함께 보는 방식과 가깝습니다."
+    const summaries = teamAudience ? [
+      "가까운 문장을 고르면 파일럿에서 확인할 지점이 여기에 표시됩니다.",
+      "고른 한 가지를 첫 파일럿 대화에서 구체적으로 살펴볼 수 있습니다.",
+      "두 가지가 가깝습니다. 근거와 우선순위 중 무엇부터 볼지 정해봅니다.",
+      "세 가지 모두 가깝습니다. 근거·우선순위·승인 경계를 함께 확인해봅니다."
+    ] : [
+      "가까운 문장을 고르면 첫 대화에서 살펴볼 내용이 여기에 표시됩니다.",
+      "고른 한 가지를 첫 대화에서 구체적으로 살펴볼 수 있습니다.",
+      "두 가지가 가깝습니다. 설명과 우선순위 중 무엇부터 볼지 정해봅니다.",
+      "세 가지 모두 가깝습니다. 설명·우선순위·대표 결정을 함께 보는 방식이 맞습니다."
     ];
     document.querySelector("[data-fit-summary]").textContent = summaries[count];
     if (source === "keyboard") markKeyboardChange(fitSection);
@@ -410,86 +333,12 @@
     updateFitMap(source);
   }
 
-  function activateFlow(mode, source) {
-    if (!flowCopy[mode]) return;
-    firstFlow.dataset.flowActive = mode;
-    document.querySelectorAll("[data-flow-step]").forEach((button) => {
-      button.setAttribute("aria-pressed", String(button.dataset.flowStep === mode));
-    });
-    document.querySelector("[data-flow-index]").textContent = flowCopy[mode].index;
-    document.querySelector("[data-flow-title]").textContent = flowCopy[mode].title;
-    document.querySelector("[data-flow-copy]").textContent = flowCopy[mode].copy;
-    if (source === "keyboard") markKeyboardChange(firstFlow);
-  }
-
-  for (let index = 0; index < 42; index += 1) {
-    const dot = document.createElement("i");
-    dot.style.left = `${7 + ((index * 47) % 87)}%`;
-    dot.style.top = `${8 + ((index * 61) % 84)}%`;
-    dot.style.background = tones[index % tones.length];
-    dot.style.opacity = String(.18 + (index % 4) * .1);
-    noteMatrix.append(dot);
-  }
-
-  document.querySelectorAll("[data-operating-card]").forEach((button) => {
-    const mode = button.dataset.operatingCard;
-    button.addEventListener("pointerenter", () => { if (finePointer.matches) activateOperating(mode, "pointer", false); });
-    button.addEventListener("pointerleave", () => { if (!button.matches(":focus-visible")) activateOperating(operatingPinned, "pointer", false); });
-    button.addEventListener("focus", () => activateOperating(mode, "keyboard", false));
-    button.addEventListener("blur", () => activateOperating(operatingPinned, "keyboard", false));
-    button.addEventListener("click", (event) => activateOperating(mode, event.detail === 0 ? "keyboard" : "pointer", true));
-    button.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return;
-      event.preventDefault();
-      activateOperating(mode, "keyboard", true);
-    });
-  });
-
-  document.querySelectorAll("[data-proof-state]").forEach((button) => {
-    const mode = button.dataset.proofState;
-    button.addEventListener("pointerenter", () => { if (finePointer.matches) activateProof(mode, "pointer", false); });
-    button.addEventListener("pointerleave", () => { if (!button.matches(":focus-visible")) activateProof(proofPinned, "pointer", false); });
-    button.addEventListener("focus", () => activateProof(mode, "keyboard", false));
-    button.addEventListener("blur", () => activateProof(proofPinned, "keyboard", false));
-    button.addEventListener("click", (event) => activateProof(mode, event.detail === 0 ? "keyboard" : "pointer", true));
-    button.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return;
-      event.preventDefault();
-      activateProof(mode, "keyboard", true);
-    });
-  });
-
-  document.querySelectorAll("[data-note-field]").forEach((button) => {
-    const mode = button.dataset.noteField;
-    button.addEventListener("pointerenter", () => { if (finePointer.matches) activateNote(mode, "pointer", false); });
-    button.addEventListener("pointerleave", () => { if (!button.matches(":focus-visible")) activateNote(notePinned, "pointer", false); });
-    button.addEventListener("focus", () => activateNote(mode, "keyboard", false));
-    button.addEventListener("blur", () => activateNote(notePinned, "keyboard", false));
-    button.addEventListener("click", (event) => activateNote(mode, event.detail === 0 ? "keyboard" : "pointer", true));
-    button.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return;
-      event.preventDefault();
-      activateNote(mode, "keyboard", true);
-    });
-  });
-
   document.querySelectorAll("[data-fit-card]").forEach((button) => {
     button.addEventListener("click", (event) => toggleFit(button, event.detail === 0 ? "keyboard" : "pointer"));
     button.addEventListener("keydown", (event) => {
       if (event.key !== "Enter" && event.key !== " ") return;
       event.preventDefault();
       toggleFit(button, "keyboard");
-    });
-  });
-
-  document.querySelectorAll("[data-flow-step]").forEach((button) => {
-    const mode = button.dataset.flowStep;
-    button.addEventListener("focus", () => activateFlow(mode, "keyboard"));
-    button.addEventListener("click", (event) => activateFlow(mode, event.detail === 0 ? "keyboard" : "pointer"));
-    button.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return;
-      event.preventDefault();
-      activateFlow(mode, "keyboard");
     });
   });
 
@@ -500,15 +349,20 @@
   buildMethodDots();
   placeMethodDots("question", "initial");
 
-  document.querySelectorAll("[data-field-signal]").forEach((button) => {
+  fieldSignals.forEach((button) => {
     const mode = button.dataset.fieldSignal;
     button.addEventListener("pointerenter", () => {
-      if (finePointer.matches) previewEvidence(mode, "pointer");
+      if (!motionAllowed()) return;
+      fieldSignals.forEach((candidate) => delete candidate.dataset.proximate);
+      button.dataset.proximate = "true";
     });
     button.addEventListener("pointerleave", () => {
+      delete button.dataset.proximate;
       if (!button.matches(":focus-visible")) clearPreview();
     });
-    button.addEventListener("focus", () => previewEvidence(mode, "keyboard"));
+    button.addEventListener("focus", () => {
+      if (!suppressSignalFocusPreview) previewEvidence(mode, "keyboard");
+    });
     button.addEventListener("blur", clearPreview);
     button.addEventListener("click", (event) => togglePinnedSignal(button, event.detail === 0 ? "keyboard" : "pointer"));
     button.addEventListener("keydown", (event) => {
@@ -527,9 +381,15 @@
     });
   });
 
-  evidenceClose.addEventListener("click", () => closeEvidence({ restoreFocus: true }));
+  evidenceClose.addEventListener("click", () => {
+    closeEvidence({ restoreFocus: true });
+    resetProximity();
+  });
   editorial.addEventListener("pointermove", updateProximity, { passive: true });
   editorial.addEventListener("pointerleave", resetProximity);
+  editorial.addEventListener("focusout", (event) => {
+    if (!editorial.contains(event.relatedTarget)) resetProximity();
+  });
   methodAtlas.addEventListener("pointermove", updateMethodPointer, { passive: true });
   methodAtlas.addEventListener("pointerleave", () => placeMethodDots(method.dataset.methodActive, "pointer"));
 
@@ -550,6 +410,7 @@
     if (event.key === "Escape" && hero.dataset.reveal !== "none") {
       event.preventDefault();
       closeEvidence({ restoreFocus: true });
+      resetProximity();
       return;
     }
     trapMenuFocus(event);
