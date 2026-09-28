@@ -5662,3 +5662,18 @@ html[data-motion="reduce"] .galaxy-hero-canvas {
     padding: 6px 5px;
   }
 }
+
+/* Keep Korean word groups intact; only unbroken code/pre strings may split. */
+body {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.keep-together {
+  white-space: nowrap;
+}
+
+code,
+pre {
+  overflow-wrap: anywhere;
+}
