@@ -5479,3 +5479,186 @@ html[data-motion="reduce"] {
 html[data-motion="reduce"] .galaxy-hero-canvas {
   opacity: .2 !important;
 }
+
+/* Fit cards: keep each sentence, explanation, and state inside one clear control. */
+.fit-selector {
+  display: grid;
+  gap: 14px;
+  border: 0;
+}
+
+.fit-selector button {
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 8px 14px;
+  min-height: 0;
+  padding: 18px;
+  border: 2px solid var(--retro-black);
+  color: var(--retro-ink);
+  background: var(--retro-paper);
+  box-shadow: 4px 4px 0 var(--retro-black);
+}
+
+.fit-selector button > span {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  align-self: start;
+  padding-top: 3px;
+  color: var(--retro-acai);
+}
+
+.fit-selector button strong {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  color: var(--retro-ink);
+  line-height: 1.35;
+}
+
+.fit-selector button p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--retro-muted);
+  background: transparent;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.fit-selector button small {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  align-self: center;
+  min-width: 56px;
+  padding: 7px 8px;
+  border: 1px solid var(--retro-black);
+  color: var(--retro-secondary);
+  background: var(--retro-lavender);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.fit-selector button[aria-pressed="true"] {
+  color: var(--retro-ink);
+  border-color: var(--retro-black);
+  background: var(--retro-gold);
+  box-shadow: 6px 6px 0 var(--retro-black);
+}
+
+.fit-selector button[aria-pressed="true"] p,
+.fit-selector button[aria-pressed="true"] small,
+.fit-selector button[aria-pressed="true"] strong,
+.fit-selector button[aria-pressed="true"] > span {
+  color: var(--retro-ink);
+}
+
+.fit-selector button[aria-pressed="true"] small {
+  border-color: var(--retro-black);
+  background: var(--retro-paper);
+}
+
+.fit-map-nodes span {
+  color: var(--retro-paper);
+  border: 2px solid var(--retro-black);
+  background: var(--retro-acai);
+  box-shadow: 3px 3px 0 var(--retro-black);
+  opacity: 1;
+}
+
+.fit-map-nodes span[data-selected="true"] {
+  color: var(--retro-paper);
+  border-color: var(--retro-black);
+  background: var(--retro-search);
+  opacity: 1;
+}
+
+.fit .first-flow-heading h3 {
+  color: var(--retro-ink);
+}
+
+.fit .first-flow-heading.scroll-rise {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.first-flow-static .first-flow-steps li {
+  color: var(--retro-ink);
+  border: 2px solid var(--retro-black);
+  background: var(--retro-paper);
+  box-shadow: 4px 4px 0 var(--retro-black);
+}
+
+.first-flow-static .first-flow-steps li > span {
+  color: var(--retro-secondary);
+}
+
+.first-flow-static .first-flow-steps li strong {
+  color: var(--retro-ink);
+}
+
+.first-flow-static .first-flow-steps li small {
+  color: var(--retro-muted);
+}
+
+.first-flow-static .first-flow-steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.first-flow-static .first-flow-steps li {
+  grid-template-columns: 28px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 8px 14px;
+}
+
+.first-flow-static .first-flow-steps li > span {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.first-flow-static .first-flow-steps li strong {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.first-flow-static .first-flow-steps li small {
+  display: block;
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin-top: 8px;
+  padding-top: 0;
+  border-top: 0;
+  white-space: normal;
+}
+
+@media (max-width: 900px) {
+  .first-flow-static .first-flow-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .first-flow-static .first-flow-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fit-selector button {
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    gap: 7px 10px;
+    padding: 16px 14px;
+  }
+
+  .fit-selector button small {
+    min-width: 50px;
+    padding: 6px 5px;
+  }
+}
