@@ -54,7 +54,7 @@ body {
 
 .galaxy-hero[data-galaxy-state="active"] .galaxy-hero-canvas,
 .galaxy-hero[data-galaxy-state="reduced"] .galaxy-hero-canvas {
-  opacity: .86;
+  opacity: .34;
 }
 
 .galaxy-hero-fallback {
@@ -68,7 +68,7 @@ body {
 }
 
 .galaxy-hero[data-galaxy-state="fallback"] .galaxy-hero-fallback {
-  opacity: .92;
+  opacity: .24;
 }
 
 .galaxy-hero-toggle {
@@ -79,14 +79,15 @@ body {
   min-width: 48px;
   min-height: 48px;
   padding: 8px 6px;
-  border: 0;
-  color: var(--canon-black, #080a0f);
-  background: transparent;
+  border: 2px solid var(--ono-black-ink);
+  color: var(--ono-black-ink);
+  background: var(--ono-panel-paper);
   font-size: 11px;
   font-weight: 760;
   line-height: 1.2;
   cursor: pointer;
   pointer-events: auto;
+  box-shadow: 3px 3px 0 var(--ono-black-ink);
 }
 
 .galaxy-hero-toggle:hover {
@@ -112,15 +113,15 @@ body {
 .nrank-status {
   max-width: 42em;
   margin: 12px 0 0;
-  color: var(--ono-paper);
+  color: var(--ono-black-ink);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 11px;
   line-height: 1.55;
 }
 
 .hero-actions .secondary-action {
-  color: var(--ono-paper);
-  border-bottom: 2px solid var(--ono-paper);
+  color: var(--ono-black-ink);
+  border-bottom: 2px solid var(--ono-black-ink);
 }
 
 /* Retro/pixel helpdesk: the paper scene is a layer in the existing hero editorial. */
@@ -233,11 +234,12 @@ body {
 .retro-speech-answer {
   top: 62px;
   right: 24px;
-  background: #E7E9F5;
+  background: var(--ono-panel-paper);
 }
 
 .retro-speech-answer::after {
   right: 32px;
+  background: var(--ono-panel-paper);
 }
 
 .retro-speech span {
@@ -418,9 +420,10 @@ body {
   margin: 0 auto;
   padding: clamp(72px, 9vw, 132px) var(--outer);
   color: var(--ono-paper);
-  border: 1px solid rgba(230, 227, 238, .24);
-  border-radius: 4px;
+  border: 3px solid var(--ono-black-ink);
+  border-radius: 0;
   background: var(--ono-ink-purple);
+  box-shadow: 10px 10px 0 var(--ono-black-ink);
 }
 
 .quest-heading {
@@ -466,15 +469,14 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 64px;
-  border-top: 1px solid rgba(230, 227, 238, .3);
-  border-bottom: 1px solid rgba(230, 227, 238, .3);
+  border: 2px solid var(--ono-paper);
 }
 
 .quest-audience button {
   min-height: 52px;
   padding: 0 16px;
   border: 0;
-  border-right: 1px solid rgba(230, 227, 238, .24);
+  border-right: 2px solid var(--ono-paper);
   color: rgba(230, 227, 238, .65);
   background: transparent;
   font-size: 14px;
@@ -493,7 +495,7 @@ body {
 
 .quest-options {
   margin-top: 34px;
-  border-top: 1px solid rgba(230, 227, 238, .3);
+  border-top: 2px solid var(--ono-paper);
 }
 
 .quest-choice {
@@ -509,7 +511,7 @@ body {
   min-height: 88px;
   padding: 17px 4px 17px 18px;
   border: 0;
-  border-bottom: 1px solid rgba(230, 227, 238, .22);
+  border-bottom: 2px solid rgba(244, 241, 232, .48);
   color: #f4e1e6;
   text-align: left;
   background: transparent;
@@ -518,8 +520,22 @@ body {
 }
 
 .quest-options > button[aria-selected="true"] {
-  background: rgba(244, 225, 230, .1);
-  box-shadow: inset 4px 0 0 var(--quest-color);
+  color: var(--ono-black-ink);
+  background: var(--ono-paper);
+  box-shadow: inset 4px 0 0 var(--quest-color), 5px 5px 0 var(--ono-black-ink);
+}
+
+.quest-options > button[aria-selected="true"] small {
+  color: var(--ono-black-ink);
+}
+
+.quest-options > button[aria-selected="true"] .quest-choice-code,
+.quest-options > button[aria-selected="true"] .quest-ready {
+  color: var(--quest-color);
+}
+
+.quest-options > button[aria-selected="true"] .quest-color-chip {
+  border-color: var(--ono-black-ink);
 }
 
 .quest-color-chip,
@@ -570,8 +586,8 @@ body {
   align-items: start;
   margin-top: 34px;
   padding: 22px 18px;
-  border: 1px solid rgba(230, 227, 238, .24);
-  background: rgba(8, 10, 15, .16);
+  border: 2px solid rgba(244, 241, 232, .62);
+  background: rgba(17, 19, 24, .2);
 }
 
 .quest-result strong {
@@ -597,13 +613,14 @@ body {
   min-height: 72px;
   margin-top: 34px;
   padding: 0 24px;
-  border: 1px solid #f4e1e6;
-  border-radius: 2px;
+  border: 3px solid var(--ono-black-ink);
+  border-radius: 0;
   color: var(--ono-ink-purple);
   background: var(--ono-paper);
   font-size: 18px;
   font-weight: 820;
   cursor: pointer;
+  box-shadow: 6px 6px 0 var(--ono-black-ink);
 }
 
 .quest-next span {
